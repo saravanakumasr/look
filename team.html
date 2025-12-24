@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>LOOKS TECH — Team</title>
+  <style>
+    :root{--bg:#070722;--card:#111133;--accent:#00f0ff;--muted:#bcd}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:Inter,system-ui,Segoe UI,Arial;background:linear-gradient(180deg,#051026 0%, #071033 100%);color:var(--muted);padding:22px}
+    .top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:20px}
+    .logo{display:flex;align-items:center;gap:12px;font-weight:800;color:var(--accent)}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:18px;border-radius:14px;position:relative;overflow:hidden;transition:transform .24s ease,box-shadow .24s ease;transform-style:preserve-3d}
+    .card:hover{transform:translateY(-8px) rotateX(4deg);box-shadow:0 30px 60px rgba(0,0,0,0.6)}
+    .avatar{width:96px;height:96px;border-radius:50%;border:3px solid rgba(0,240,255,0.12);object-fit:cover;margin-bottom:10px}
+    .name{font-size:18px;color:#eaffff;font-weight:700}
+    .role{color:#9fb; margin-bottom:12px}
+    .contact{display:flex;gap:8px;flex-wrap:wrap}
+    .btn{padding:8px 12px;border-radius:8px;text-decoration:none;color:#002;background:linear-gradient(90deg,var(--accent),#00c7d6);font-weight:700}
+    @media (max-width:720px){body{padding:12px} .top{flex-direction:column;align-items:flex-start}}
+  </style>
+</head>
+<body>
+  <div class="top">
+    <div class="logo">LOOKS TECH — Team</div>
+    <a href="index.html" class="btn" style="background:#0ad6c6;color:#002">Back to Dashboard</a>
+  </div>
+
+  <section class="grid">
+    <!-- Founder -->
+    <article class="card">
+      <img class="avatar" src="https://via.placeholder.com/200" alt="Dr S Kannan">
+      <div class="name">Dr. S. Kannan</div>
+      <div class="role">Founder</div>
+      <p class="muted">Visionary & academic liaison. Founder of Looks Tech.</p>
+      <div style="height:10px"></div>
+      <div class="contact">
+        <a class="btn" href="mailto:founder@lookstech.com">Email</a>
+        <a class="btn" href="tel:+919000000001">Call</a>
+      </div>
+    </article>
+
+    <!-- Director -->
+    <article class="card">
+      <img class="avatar" src="https://via.placeholder.com/200" alt="M Saravanakumar">
+      <div class="name">Mr. M. Saravanakumar</div>
+      <div class="role">Director</div>
+      <p class="muted">Director — operations & project delivery.</p>
+      <div style="height:10px"></div>
+      <div class="contact">
+        <a class="btn" href="mailto:director@lookstech.com">Email</a>
+        <a class="btn" href="tel:+919000000002">Call</a>
+      </div>
+    </article>
+
+    <!-- Manager -->
+    <article class="card">
+      <img class="avatar" src="https://via.placeholder.com/200" alt="M Dharani Devi">
+      <div class="name">Mrs. M. Dharani Devi</div>
+      <div class="role">Manager</div>
+      <p class="muted">Manager — training, workshops & HR coordination.</p>
+      <div style="height:10px"></div>
+      <div class="contact">
+        <a class="btn" href="mailto:manager@lookstech.com">Email</a>
+        <a class="btn" href="tel:+919000000003">Call</a>
+      </div>
+    </article>
+
+    <!-- Member -->
+    <article class="card">
+      <img class="avatar" src="https://via.placeholder.com/200" alt="Balaji">
+      <div class="name">Mr. Balaji</div>
+      <div class="role">Member — Looks Tech</div>
+      <p class="muted">Team member — support & field operations.</p>
+      <div style="height:10px"></div>
+      <div class="contact">
+        <a class="btn" href="mailto:balaji@lookstech.com">Email</a>
+        <a class="btn" href="tel:+919000000004">Call</a>
+      </div>
+    </article>
+
+  </section>
+</body>
+</html>

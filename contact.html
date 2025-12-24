@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us – LOOKS TECH</title>
+
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    background: #0d0d26;
+    color: #e0e0ff;
+    min-height: 100vh;
+}
+
+header {
+    background: #12123b;
+    padding: 20px;
+    text-align: center;
+    font-size: 26px;
+    color: #00f0ff;
+    text-shadow: 0 0 12px #00f0ff;
+}
+
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.card {
+    background: #1b1b45;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 0 25px #000;
+}
+
+h2 {
+    color: #00f0ff;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.contact-item {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.contact-item a {
+    color: #00f0ff;
+    text-decoration: none;
+}
+
+form {
+    margin-top: 30px;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: #00f0ff;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    background: #12123b;
+    color: #e0e0ff;
+    font-size: 15px;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+button {
+    margin-top: 20px;
+    padding: 14px;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    background: #00d6e6;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #00f0ff;
+    box-shadow: 0 0 15px #00f0ff;
+}
+
+.whatsapp {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.whatsapp a {
+    display: inline-block;
+    padding: 12px 20px;
+    background: #25D366;
+    color: #000;
+    font-weight: bold;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.whatsapp a:hover {
+    box-shadow: 0 0 15px #25D366;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    color: #aaa;
+}
+</style>
+</head>
+
+<body>
+
+<header>Contact Us – LOOKS TECH</header>
+
+<div class="container">
+<div class="card">
+
+<h2>Get in Touch</h2>
+<div class="contact-item">
+📍 <strong>Address:</strong><br>
+13 PMA Building, Vadapalanji,<br>
+Near Madurai Kamaraj University,<br>
+Madurai, Tamil Nadu, India
+</div>
+        <div class="map">
+            <iframe 
+                src="https://www.google.com/maps?q=Madurai%20Kamaraj%20University&output=embed"
+                loading="lazy">
+            </iframe>
+        </div>
+<div class="contact-item">
+📞 <strong>Phone:</strong>
+<a href="tel:+918681819168">+91 86818 19168</a>
+</div>
+<div class="contact-item">
+📧 <strong>Email:</strong><br>
+<a href="mailto:saravanakumasr@gmail.com">saravanakumasr@gmail.com</a><br>
+<a href="mailto:msaravanakumarsk.in@gmail.com">msaravanakumarsk.in@gmail.com</a>
+</div>
+
+<!-- CONTACT FORM -->
+<form onsubmit="sendMail(); return false;">
+    <label>Name</label>
+    <input type="text" id="name" required placeholder="Your Name">
+
+    <label>Email</label>
+    <input type="email" id="email" required placeholder="Your Email">
+
+    <label>Message</label>
+    <textarea id="message" required placeholder="Your Message"></textarea>
+
+    <button type="submit">📨 Send Message</button>
+</form>
+
+<!-- WHATSAPP -->
+<div class="whatsapp">
+    <a href="https://wa.me/918681819168" target="_blank">
+        💬 Chat on WhatsApp
+    </a>
+</div>
+
+</div>
+</div>
+
+<footer>
+© 2025 LOOKS TECH | All Rights Reserved
+</footer>
+<script>
+function sendMail() {
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+
+    const subject = "Contact Form Message - LOOKS TECH";
+    const body =
+        "Name: " + name + "%0D%0A" +
+        "Email: " + email + "%0D%0A%0D%0A" +
+        "Message:%0D%0A" + message;
+
+    window.location.href =
+        "mailto:saravanakumasr@gmail.com?subject=" +
+        subject + "&body=" + body;
+}
+</script>
+
+</body>
+</html>

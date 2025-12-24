@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LOOKS TECH – Projects</title>
+
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+        font-family: "Segoe UI", sans-serif;
+        background: #0d0d26;
+        color: #e0e0ff;
+        display: flex;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    /* SIDEBAR */
+    .sidebar {
+        width: 260px;
+        background: #12123b;
+        padding: 25px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        box-shadow: 0 0 25px #000;
+        height: 100vh;
+    }
+
+    .logo {
+        font-size: 26px;
+        font-weight: bold;
+        color: #00f0ff;
+        margin-bottom: 25px;
+        text-align: center;
+        animation: glowLogo 3s infinite alternate;
+    }
+
+    @keyframes glowLogo {
+        from { text-shadow: 0 0 6px #00f0ff; }
+        to   { text-shadow: 0 0 20px #00f0ff; }
+    }
+
+    .sidebar a {
+        text-decoration: none;
+        padding: 12px;
+        color: #d0d0ff;
+        border-radius: 8px;
+        transition: 0.3s;
+        font-size: 15px;
+    }
+
+    .sidebar a:hover {
+        background: #00f0ff33;
+        color: #00f0ff;
+        transform: translateX(10px);
+    }
+
+    /* MAIN PANEL */
+    .main {
+        flex: 1;
+        padding: 25px;
+        overflow-y: auto;
+    }
+
+    .header-title {
+        font-size: 30px;
+        margin-bottom: 15px;
+        color: #00f0ff;
+        text-shadow: 0 0 12px #00f0ff;
+    }
+
+    /* ADD BUTTON */
+    .add-btn {
+        background: #00d6e6;
+        padding: 12px 18px;
+        border-radius: 8px;
+        text-decoration: none;
+        color: #000;
+        font-weight: bold;
+        box-shadow: 0 0 10px #00eaff;
+        transition: 0.3s;
+    }
+
+    .add-btn:hover {
+        background: #00f0ff;
+        box-shadow: 0 0 16px #00f0ff;
+    }
+
+    .projects-grid {
+        margin-top: 25px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+    }
+
+    .project-card {
+        background: #1c1c4d;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 0 18px #000;
+        transition: 0.4s;
+        transform-style: preserve-3d;
+    }
+
+    .project-card:hover {
+        transform: scale(1.07) rotateY(10deg);
+        box-shadow: 0 0 25px #00f0ff;
+    }
+
+    .project-title {
+        font-size: 20px;
+        margin-bottom: 8px;
+        color: #00f0ff;
+    }
+
+    .status-badge {
+        padding: 6px 12px;
+        border-radius: 8px;
+        font-size: 12px;
+        color: #000;
+        display: inline-block;
+        margin-bottom: 10px;
+    }
+
+    .active { background: #00ffa6; }
+    .completed { background: #00c3ff; }
+    .pending { background: #ffea00; }
+
+    .project-desc {
+        font-size: 14px;
+        opacity: 0.9;
+        line-height: 1.5;
+        margin-bottom: 12px;
+    }
+
+    .view-btn {
+        background: #00d6e6;
+        padding: 8px 14px;
+        border-radius: 8px;
+        color: #000;
+        text-decoration: none;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    .view-btn:hover {
+        background: #00f0ff;
+        box-shadow: 0 0 15px #00f0ff;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+        body { flex-direction: column; }
+        .sidebar {
+            width: 100%;
+            flex-direction: row;
+            overflow-x: auto;
+            height: auto;
+        }
+        .sidebar a { flex: 1; text-align: center; }
+    }
+</style>
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+    <div class="logo">LOOKS TECH</div>
+
+    <a href="index.html">🏠 Dashboard</a>
+    <a href="projects.html">📁 Projects</a>
+    <a href="workshop.html">🛠 Workshop Centre</a>
+    <a href="team.html">👥 Team Page</a>
+    <a href="registration.html">📝 Registration</a>
+    <a href="settings.html">⚙ Settings</a>
+    <a href="logout.html">🚪 Logout</a>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="main">
+
+    <div class="header-title">Projects Overview</div>
+    <a class="add-btn" href="#">➕ Add New Project</a>
+
+    <!-- GRID -->
+    <div class="projects-grid">
+
+        <!-- PROJECT 1 -->
+        <div class="project-card">
+            <div class="status-badge active">ACTIVE</div>
+            <div class="project-title">AI OCR System</div>
+            <div class="project-desc">
+                Advanced handwritten and printed character recognition using hybrid ML + graph models.
+            </div>
+            <a class="view-btn" href="#">View Details</a>
+        </div>
+
+        <!-- PROJECT 2 -->
+        <div class="project-card">
+            <div class="status-badge pending">PENDING</div>
+            <div class="project-title">Cyber Security Audit</div>
+            <div class="project-desc">
+                End-to-end vulnerability analysis and enterprise system threat detection.
+            </div>
+            <a class="view-btn" href="#">View Details</a>
+        </div>
+
+        <!-- PROJECT 3 -->
+        <div class="project-card">
+            <div class="status-badge completed">COMPLETED</div>
+            <div class="project-title">LOOKS TECH Website</div>
+            <div class="project-desc">
+                Full responsive website, dashboard, animations and team pages.
+            </div>
+            <a class="view-btn" href="#">View Details</a>
+        </div>
+
+        <!-- PROJECT 4 -->
+        <div class="project-card">
+            <div class="status-badge active">ACTIVE</div>
+            <div class="project-title">Image Graph Analyzer</div>
+            <div class="project-desc">
+                Converts images to graph nodes using corner detection and adjacency analysis.
+            </div>
+            <a class="view-btn" href="#">View Details</a>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

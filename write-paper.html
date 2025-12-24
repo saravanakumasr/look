@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Write Paper – LOOKS TECH</title>
+
+<style>
+    body {
+        font-family: "Segoe UI", sans-serif;
+        background: #0d0d26;
+        color: #e0e0ff;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    header {
+        background: #12123b;
+        padding: 20px;
+        text-align: center;
+        font-size: 24px;
+        color: #00f0ff;
+        text-shadow: 0 0 10px #00f0ff;
+    }
+
+    .editor-container {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    label {
+        margin-top: 10px;
+        font-weight: bold;
+        color: #00f0ff;
+    }
+
+    input[type="text"], textarea {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border-radius: 8px;
+        border: none;
+        background: #1b1b45;
+        color: #e0e0ff;
+        font-size: 16px;
+        resize: vertical;
+    }
+
+    textarea {
+        min-height: 100px;
+    }
+
+    .toolbar {
+        display: flex;
+        gap: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .toolbar button {
+        padding: 8px 12px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-weight: bold;
+        background: #00d6e6;
+        color: #000;
+        transition: 0.3s;
+    }
+
+    .toolbar button:hover {
+        background: #00f0ff;
+        color: #000;
+    }
+
+    #content-editor {
+        flex: 1;
+        background: #1b1b45;
+        border-radius: 10px;
+        padding: 15px;
+        overflow-y: auto;
+        min-height: 300px;
+        color: #e0e0ff;
+        font-size: 16px;
+    }
+
+    .save-btn {
+        margin-top: 15px;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 8px;
+        background: #00d6e6;
+        color: #000;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .save-btn:hover {
+        background: #00f0ff;
+        color: #000;
+    }
+</style>
+</head>
+
+<body>
+
+<header>Write Paper – LOOKS TECH</header>
+
+<div class="editor-container">
+    <!-- Paper metadata -->
+    <label for="paper-title">Title:</label>
+    <input type="text" id="paper-title" placeholder="Enter paper title here">
+
+    <label for="paper-authors">Authors:</label>
+    <input type="text" id="paper-authors" placeholder="Enter authors separated by commas">
+
+    <label for="paper-abstract">Abstract:</label>
+    <textarea id="paper-abstract" placeholder="Enter abstract here"></textarea>
+
+    <!-- Toolbar for content formatting -->
+    <div class="toolbar">
+        <button onclick="format('bold')">Bold</button>
+        <button onclick="format('italic')">Italic</button>
+        <button onclick="format('underline')">Underline</button>
+        <button onclick="format('insertUnorderedList')">• List</button>
+        <button onclick="format('insertOrderedList')">1. List</button>
+        <button onclick="format('justifyLeft')">Left</button>
+        <button onclick="format('justifyCenter')">Center</button>
+        <button onclick="format('justifyRight')">Right</button>
+    </div>
+
+    <!-- Editable content area -->
+    <div id="content-editor" contenteditable="true" placeholder="Start writing your paper content here..."></div>
+
+    <!-- Save button -->
+    <button class="save-btn" onclick="savePaper()">💾 Save Paper</button>
+</div>
+
+<script>
+    // Formatting function for editor
+    function format(command) {
+        document.execCommand(command, false, null);
+    }
+
+    // Save the paper as a .txt file
+    function savePaper() {
+        const title = document.getElementById('paper-title').value.trim();
+        const authors = document.getElementById('paper-authors').value.trim();
+        const abstract = document.getElementById('paper-abstract').value.trim();
+        const content = document.getElementById('content-editor').innerText.trim();
+
+        if (!title || !authors || !abstract || !content) {
+            alert("Please fill all fields before saving!");
+            return;
+        }
+
+        const fullText = `Title: ${title}\nAuthors: ${authors}\n\nAbstract:\n${abstract}\n\nContent:\n${content}`;
+        const blob = new Blob([fullText], { type: 'text/plain' });
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = `${title.replace(/\s+/g, '_')}.txt`;
+        a.click();
+    }
+</script>
+
+</body>
+</html>

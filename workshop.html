@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Workshop Centre | LOOKS TECH</title>
+
+<style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+        font-family: 'Segoe UI', sans-serif;
+        background:#0a0a24;
+        color:#e0e0ff;
+        display:flex;
+        min-height:100vh;
+    }
+
+    /* Sidebar */
+    .sidebar {
+        width:260px;
+        background:#151538;
+        padding:20px;
+        display:flex;
+        flex-direction:column;
+    }
+    .logo {
+        font-size:26px;
+        font-weight:bold;
+        color:#00f0ff;
+        text-shadow:0 0 10px #00ffff;
+        margin-bottom:25px;
+    }
+    .sidebar a{
+        color:#ccc;
+        text-decoration:none;
+        padding:12px 0;
+        transition:0.3s;
+    }
+    .sidebar a:hover{
+        color:#00f0ff;
+        transform:translateX(5px);
+    }
+
+    /* Main Content */
+    .main {
+        flex:1;
+        padding:30px;
+        animation: fadeIn 1s ease-in-out;
+    }
+
+    .header {
+        font-size:28px;
+        margin-bottom:20px;
+        color:#00f0ff;
+        text-shadow:0 0 10px #00ffff;
+    }
+
+    /* Workshop Cards */
+    .workshop-container {
+        display:grid;
+        grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+        gap:20px;
+    }
+
+    .workshop-card {
+        background:#1a1a40;
+        padding:20px;
+        border-radius:15px;
+        box-shadow:0 0 10px rgba(0,255,255,0.2);
+        transition:0.4s;
+        position:relative;
+        overflow:hidden;
+    }
+
+    .workshop-card:hover {
+        transform:translateY(-8px);
+        box-shadow:0 0 20px rgba(0,255,255,0.5);
+    }
+
+    .workshop-card h3 {
+        color:#00f0ff;
+        margin-bottom:10px;
+    }
+
+    .workshop-card p {
+        line-height:1.6;
+        color:#ccc;
+    }
+
+    .btn {
+        margin-top:15px;
+        display:inline-block;
+        padding:10px 20px;
+        color:#000;
+        background:#00f0ff;
+        border-radius:8px;
+        font-weight:bold;
+        text-decoration:none;
+        transition:0.3s;
+    }
+
+    .btn:hover {
+        background:#00cce0;
+    }
+
+    @keyframes fadeIn {
+        from { opacity:0; transform:translateY(10px); }
+        to { opacity:1; transform:translateY(0); }
+    }
+
+</style>
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <div class="logo">LOOKS TECH</div>
+
+        <!-- Navigation -->
+        <a href="index.html">Dashboard</a>
+        <a href="projects.html">Projects</a>
+        <a href="workshop.html">Workshop Centre</a>
+        <a href="team.html">Team</a>
+        <a href="registration.html">Registration</a>
+        <a href="#">Settings</a>
+        <a href="#">Logout</a>
+    </div>
+
+    <div class="main">
+        <div class="header">📚 Workshop Centre</div>
+
+        <div class="workshop-container">
+
+            <div class="workshop-card">
+                <h3>AI & Machine Learning Workshop</h3>
+                <p>Hands-on training on AI, ML models, dataset preparation, and real-time applications.</p>
+                <a class="btn" href="#">Register Now</a>
+            </div>
+
+            <div class="workshop-card">
+                <h3>Full Stack Development</h3>
+                <p>Learn HTML, CSS, JavaScript, React, Node.js, REST API, and cloud deployment.</p>
+                <a class="btn" href="#">Join Workshop</a>
+            </div>
+
+            <div class="workshop-card">
+                <h3>Computer Vision & OCR</h3>
+                <p>Explore image processing, OpenCV, feature extraction, and OCR model development.</p>
+                <a class="btn" href="#">Enroll</a>
+            </div>
+
+            <div class="workshop-card">
+                <h3>Cybersecurity Basics</h3>
+                <p>Network security, ethical hacking fundamentals, and security testing tools.</p>
+                <a class="btn" href="#">Start Learning</a>
+            </div>
+
+            <div class="workshop-card">
+                <h3>Data Science & Analytics</h3>
+                <p>Data cleaning, visualization, Python analytics, and dashboards.</p>
+                <a class="btn" href="#">Sign Up</a>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

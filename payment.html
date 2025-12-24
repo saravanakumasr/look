@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Payment – LOOKS TECH</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    background: #0d0d26;
+    color: #e0e0ff;
+    min-height: 100vh;
+}
+
+/* HEADER */
+header {
+    background: #12123b;
+    padding: 22px;
+    text-align: center;
+    font-size: 26px;
+    color: #00f0ff;
+    text-shadow: 0 0 12px #00f0ff;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+/* CARD */
+.card {
+    background: #1b1b45;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 0 25px #000;
+    text-align: center;
+}
+
+/* TITLE */
+.card h2 {
+    color: #00f0ff;
+    margin-bottom: 8px;
+}
+
+/* PRICE */
+.price {
+    font-size: 26px;
+    margin: 12px 0;
+    color: #00ff99;
+}
+
+/* QR IMAGE */
+.qr {
+    width: 220px;
+    margin: 15px auto;
+    border-radius: 12px;
+    background: #fff;
+    padding: 10px;
+}
+
+/* BUTTON */
+.pay-btn {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 14px 26px;
+    background: #00f0ff;
+    color: #000;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.pay-btn:hover {
+    background: #00ff99;
+}
+
+/* INFO */
+.info {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #ccc;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 15px;
+    color: #aaa;
+    font-size: 14px;
+}
+</style>
+</head>
+
+<body>
+
+<header>Secure Payment – LOOKS TECH</header>
+
+<div class="container">
+
+<div class="grid">
+
+<!-- WORKSHOP -->
+<div class="card">
+    <h2>🧑‍🏫 Workshop Payment</h2>
+    <p>Training / Workshop Registration</p>
+    <div class="price">₹ 2,000</div>
+
+    <img src="qr-gpay.jpg" class="qr" alt="GPay QR Code">
+
+    <a class="pay-btn"
+       href="upi://pay?pa=saravanakumasr@okaxis&pn=M%20Saravana%20Kumar&tn=Workshop%20Fee">
+       Pay via GPay
+    </a>
+
+    <div class="info">
+        Scan QR or Pay via UPI<br>
+        UPI ID: saravanakumasr@okaxis
+    </div>
+</div>
+
+<!-- PROJECT -->
+<div class="card">
+    <h2>💻 Project Payment</h2>
+    <p>Academic / Industrial Projects</p>
+    <div class="price">₹ 5,000</div>
+
+    <img src="qr-gpay.jpg" class="qr" alt="GPay QR Code">
+
+    <a class="pay-btn"
+       href="upi://pay?pa=saravanakumasr@okaxis&pn=M%20Saravana%20Kumar&tn=Project%20Payment">
+       Pay via GPay
+    </a>
+
+    <div class="info">
+        Scan QR or Pay via UPI<br>
+        UPI ID: saravanakumasr@okaxis
+    </div>
+</div>
+
+<!-- PAPER -->
+<div class="card">
+    <h2>📄 Paper Writing Payment</h2>
+    <p>Journal / Conference Paper Writing</p>
+    <div class="price">₹ 3,500</div>
+
+    <img src="qr-gpay.jpg" class="qr" alt="GPay QR Code">
+
+    <a class="pay-btn"
+       href="upi://pay?pa=saravanakumasr@okaxis&pn=M%20Saravana%20Kumar&tn=Paper%20Writing%20Fee">
+       Pay via GPay
+    </a>
+
+    <div class="info">
+        Scan QR or Pay via UPI<br>
+        UPI ID: saravanakumasr@okaxis
+    </div>
+</div>
+
+</div>
+
+</div>
+
+<footer>
+© 2025 LOOKS TECH | Payments powered by UPI
+</footer>
+
+</body>
+</html>
